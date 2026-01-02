@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+svg {
+  fill: white;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+  padding: 25px;
+  border-radius: 50%;
+  width: 180px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+svg:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+
+.wrapper {
+  padding: 40px 30px;
+  max-width: 450px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  font-size: 2.2em;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.wrapper > p {
+  text-align: center;
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 25px;
+}
+
+.plates {
+  margin: 0 0 20px 0;
+  padding: 0;
+  text-align: left;
+  list-style: none;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.plates::-webkit-scrollbar {
+  width: 8px;
+}
+
+.plates::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.plates::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+}
+
+.plates li {
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.plates li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.plates label {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1.05em;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.plates input {
+  width: 22px;
+  height: 22px;
+  margin-right: 15px;
+  cursor: pointer;
+  accent-color: #667eea;
+  flex-shrink: 0;
+}
+
+.plates input:checked + label {
+  text-decoration: line-through;
+  opacity: 0.6;
+  color: #999;
+}
+
+.add-items {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+}
+
+.add-items input[type="text"] {
+  flex: 1;
+  padding: 14px 18px;
+  outline: 0;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1em;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.add-items input[type="text"]:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.add-items input[type="submit"] {
+  padding: 14px 25px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.add-items input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.add-items input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+button[name="clear"] {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+}
+
+button[name="clear"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 87, 108, 0.5);
+}
+
+button[name="clear"]:active {
+  transform: translateY(0);
+}

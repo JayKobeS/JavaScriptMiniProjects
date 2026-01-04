@@ -1,0 +1,86 @@
+    :root {
+      --bg: #f6f7fb;
+      --ink: #111827;
+      --muted: #6b7280;
+      --accent: #10b981;
+      --paper: #ffffff;
+      --rule: #e5e7eb;
+      --shadow: 0 15px 45px rgba(17, 24, 39, 0.15);
+    }
+
+    html {
+      font-size: 10px;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 20% 20%, #e0f7ff 0, transparent 35%),
+                  radial-gradient(circle at 80% 0%, #e4ffe9 0, transparent 32%),
+                  var(--bg);
+      font-family: "Inter", "Helvetica Neue", system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      letter-spacing: 0.01em;
+    }
+
+    .words {
+      width: min(90vw, 640px);
+      min-height: 320px;
+      margin: 40px auto;
+      padding: 3rem 3rem 3rem 4.6rem;
+      background: var(--paper);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      position: relative;
+      line-height: 1.8;
+      font-size: 1.7rem;
+      overflow: hidden;
+      background-image:
+        linear-gradient(#fff 0, #fff 2.4rem, var(--paper) 2.4rem),
+        repeating-linear-gradient(
+          to bottom,
+          transparent 0,
+          transparent 2.4rem,
+          var(--rule) 2.4rem,
+          var(--rule) 2.6rem
+        );
+      background-size: 100% 100%, 100% 2.6rem;
+      background-repeat: no-repeat;
+    }
+
+    .words::before {
+      content: "";
+      position: absolute;
+      inset: 14px 14px auto auto;
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      box-shadow:
+        0 0 0 2px var(--paper),
+        0 0 0 4px rgba(16, 185, 129, 0.2);
+      background: var(--accent);
+    }
+
+    .words::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 34px;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(var(--accent), var(--accent)) 0 0/2px 20% no-repeat,
+                  linear-gradient(var(--rule), var(--rule)) 0 0/2px 100% no-repeat;
+      opacity: 0.7;
+    }
+
+    p {
+      margin: 0 0 1.8rem;
+      color: var(--ink);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
